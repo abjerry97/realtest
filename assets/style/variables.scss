@@ -1,0 +1,356 @@
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+}
+$myBlackColor: #1e1e1e;
+
+body {
+  margin: 0;
+  padding: 0;
+  color: $myBlackColor;
+  font-family: "Space Grotesk", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit !important;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.d-flex {
+  display: flex;
+}
+.justify-content-between {
+  justify-content: space-between;
+}
+// .red {
+//   background-color: red;
+// }
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container,
+  .container-sm {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container,
+  .container-md,
+  .container-sm {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl {
+    max-width: 1140px;
+  }
+}
+.bg-gray-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(243, 244, 246, var(--tw-bg-opacity));
+}
+.vh-100 {
+  min-height: 100vh;
+}
+.gap-1 {
+  gap: 1rem;
+}
+.mb-1 {
+  margin-bottom: 1rem;
+}
+.mb-2 {
+  margin-bottom: 2rem;
+}
+.mt-2 {
+  margin-top: 2rem;
+}
+.mb-3 {
+  margin-bottom: 3rem;
+}
+.pt-3 {
+  padding-top: 3rem;
+}
+.shape-list {
+  flex-wrap: wrap;
+  & li {
+    border-radius: 50%;
+    padding: 0.3rem 1rem;
+    box-shadow: 0px 0px 0px 1px rgb(0 0 0 / 20%), 0 0px 0px 0 rgb(0 0 0 / 19%) !important;
+    font-weight: 400;
+  }
+  & li:hover {
+    background-color: #ededed !important;
+    cursor: pointer;
+  }
+}
+
+.colors {
+  height: 2rem;
+  width: 2rem;
+  background-color: #efefef;
+  border-radius: 50%;
+  box-shadow: 2px 2px 8px 2px rgb(0 0 0 / 20%), 0 0px 0px 0 rgb(0 0 0 / 19%) !important;
+
+  &:hover {
+    transform: scale(1.01, 1.01);
+    cursor: pointer;
+  }
+  &.red {
+    background-color: red;
+  }
+  &.blue {
+    background-color: blue;
+  }
+  &.green {
+    background-color: green;
+  }
+  &.gray {
+    background-color: gray;
+  }
+  &.purple {
+    background-color: purple;
+  }
+}
+
+.card-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+  & .card {
+    box-shadow: 0px 0px 0px 0px rgb(0 0 0 / 20%), 0 1px 2px 0 rgb(0 0 0 / 19%) !important;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    &:hover {
+      transform: scale(1.01, 1.01);
+      cursor: pointer;
+    }
+  }
+}
+@media (min-width: 600px) {
+  .card-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 900px) {
+  .card-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card-body {
+  width: 5rem;
+  height: 5rem;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 5rem solid transparent;
+  border-right: 5rem solid transparent;
+  border-bottom: 5rem solid #555;
+
+  &.red {
+    border-bottom: 5rem solid red;
+  }
+  &.blue {
+    border-bottom: 5rem solid blue;
+  }
+  &.green {
+    border-bottom: 5rem solid green;
+  }
+  &.gray {
+    border-bottom: 5rem solid gray;
+  }
+  &.purple {
+    border-bottom: 5rem solid purple;
+  }
+}
+
+.rectangle{
+  width: 9rem;
+	height: 5rem;
+
+  &.red {
+    background-color: red;
+  }
+  &.blue {
+    background-color: blue;
+  }
+  &.green {
+    background-color: green;
+  }
+  &.gray {
+    background-color: gray;
+  }
+  &.purple {
+    background-color: purple;
+  }
+}
+.oval{
+  width: 9rem;
+	height: 5rem;
+  border-radius: 50%;
+  &.red {
+    background-color: red;
+  }
+  &.blue {
+    background-color: blue;
+  }
+  &.green {
+    background-color: green;
+  }
+  &.gray {
+    background-color: gray;
+  }
+  &.purple {
+    background-color: purple;
+  }
+}
+.round{
+  width: 5rem;
+	height: 5rem;
+  border-radius: 50%;
+  &.red {
+    background-color: red;
+  }
+  &.blue {
+    background-color: blue;
+  }
+  &.green {
+    background-color: green;
+  }
+  &.gray {
+    background-color: gray;
+  }
+  &.purple {
+    background-color: purple;
+  }
+}
+.square{
+  width: 5rem;
+	height: 5rem;
+  &.red {
+    background-color: red;
+  }
+  &.blue {
+    background-color: blue;
+  }
+  &.green {
+    background-color: green;
+  }
+  &.gray {
+    background-color: gray;
+  }
+  &.purple {
+    background-color: purple;
+  }
+}
+
+input {
+  height: 45px;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+}
+button {
+  width: 200px;
+  outline: none;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.login__container,
+.signup__container,
+.verify,
+.dashboard {
+  width: 100%;
+  min-height: 100vh;
+  padding: 50px 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.login__form,
+.verify__form,
+.signup__form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.loginBtn,
+.signupBtn,
+.codeBtn {
+  background-color: green;
+  color: #fff;
+  margin-bottom: 15px;
+}
+.signOutBtn {
+  background-color: #c21010;
+  color: #fff;
+}
+.link {
+  cursor: pointer;
+  color: rgb(39, 147, 39);
+}
+.code {
+  width: 50%;
+  text-align: center;
+}
+.verify__form {
+  align-items: center;
+}
+
+@media screen and (max-width: 800px) {
+  .login__container,
+  .signup__container,
+  .verify {
+    padding: 30px;
+  }
+  .login__form,
+  .verify__form,
+  .signup__form {
+    width: 100%;
+  }
+}
