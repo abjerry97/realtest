@@ -114,26 +114,59 @@ a {
     padding: 0.3rem 1rem;
     box-shadow: 0px 0px 0px 1px rgb(0 0 0 / 20%), 0 0px 0px 0 rgb(0 0 0 / 19%) !important;
     font-weight: 400;
+    font-size: 14px;
+    margin: .2rem;
+
+  &.selected {
+    background-color: #555;
+    color: #efefef;
+  }
   }
   & li:hover {
     background-color: #ededed !important;
     cursor: pointer;
+    color:#1e1e1e;
   }
 }
-
+.gray-text {
+  color: rgb(121, 121, 121);
+}
 .colors {
   height: 2rem;
   width: 2rem;
+  margin:.2rem;
   background-color: #efefef;
   border-radius: 50%;
-  box-shadow: 2px 2px 8px 2px rgb(0 0 0 / 20%), 0 0px 0px 0 rgb(0 0 0 / 19%) !important;
 
   &:hover {
     transform: scale(1.01, 1.01);
     cursor: pointer;
   }
   &.red {
-    background-color: red;
+    background-color: #ff4c4c;
+  }
+  &.blue {
+    background-color: rgba(0, 0, 255, 0.514);
+  }
+  &.green {
+    background-color: #93c47d;
+  }
+  &.gray {
+    background-color: rgb(170, 170, 170);
+  }
+  &.purple {
+    background-color: rgb(146, 55, 146);
+  }
+  &.orange {
+    background-color: rgb(219, 161, 53);
+  }
+
+  &.selected {
+
+    border: 1px solid #1e1e1e;
+    box-shadow: 2px 2px 8px 2px rgb(0 0 0 / 20%), 0 0px 0px 0 rgb(0 0 0 / 19%) !important;
+  &.red {
+    background-color: red !important;
   }
   &.blue {
     background-color: blue;
@@ -147,6 +180,12 @@ a {
   &.purple {
     background-color: purple;
   }
+  &.orange {
+    background-color: orange;
+  }
+  }
+
+
 }
 
 .card-wrapper {
@@ -183,7 +222,7 @@ a {
   height: 5rem;
 }
 
-.triangle {
+.Triangle {
   width: 0;
   height: 0;
   border-left: 5rem solid transparent;
@@ -205,9 +244,12 @@ a {
   &.purple {
     border-bottom: 5rem solid purple;
   }
+  &.orange {
+    border-bottom: 5rem solid orange;
+  }
 }
 
-.rectangle{
+.Rectangle{
   width: 9rem;
 	height: 5rem;
 
@@ -226,8 +268,11 @@ a {
   &.purple {
     background-color: purple;
   }
+  &.orange {
+    background-color: orange;
+  }
 }
-.oval{
+.Oval{
   width: 9rem;
 	height: 5rem;
   border-radius: 50%;
@@ -246,8 +291,11 @@ a {
   &.purple {
     background-color: purple;
   }
+  &.orange {
+    background-color: orange;
+  }
 }
-.round{
+.Round{
   width: 5rem;
 	height: 5rem;
   border-radius: 50%;
@@ -266,8 +314,11 @@ a {
   &.purple {
     background-color: purple;
   }
+  &.orange {
+    background-color: orange;
+  }
 }
-.square{
+.Square{
   width: 5rem;
 	height: 5rem;
   &.red {
@@ -284,6 +335,12 @@ a {
   }
   &.purple {
     background-color: purple;
+  }
+  &.orange {
+    background-color: orange;
+  }
+  &.orange {
+    background-color: orange;
   }
 }
 
