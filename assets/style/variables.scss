@@ -123,9 +123,10 @@ a {
   }
   }
   & li:hover {
-    background-color: #ededed !important;
+    // background-color: #ededed !important;
     cursor: pointer;
-    color:#1e1e1e;
+    // color:#1e1e1e;
+    box-shadow: 0px 0px 0px 1px #1e1e1e, 0 0px 0px 0 #1e1e1e !important;
   }
 }
 .gray-text {
