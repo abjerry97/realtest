@@ -85,6 +85,8 @@ export default {
     });
 
       this.getItems();
+
+this.getText()
     },
     setClass: function (value1, value2) {
       const obj = {};
@@ -128,7 +130,7 @@ export default {
     });
 
       this.getItems();
-
+this.getText()
 
 
 
@@ -136,10 +138,32 @@ export default {
 
     },
   getText(){
+
+
       if( this.selectedFilters.colorsFilter.length == this.colors.length &&this.selectedFilters.shapesFilter.length == this.shapes.length){
          this.textToDisplay="All Items"
       }
+      else if (this.selectedFilters.colorsFilter.length == this.colors.length &&this.selectedFilters.shapesFilter.length >1 || this.selectedFilters.colorsFilter.length >1 &&this.selectedFilters.shapesFilter.length == this.shapes.length){
+        this.textToDisplay="Multiple Items"
+      }
+      else if (this.selectedFilters.colorsFilter.length == 1  &&  this.selectedFilters.shapesFilter.length == this.shapes.length){
+        this.textToDisplay=`All ${this.selectedFilters.colorsFilter[0]} items`
+      }
+      else if (this.selectedFilters.shapesFilter.length == 1  && this.selectedFilters.colorsFilter.length == this.colors.length){
+        this.textToDisplay=`All ${this.selectedFilters.shapesFilter[0]} items`
+      }
+      else if (this.selectedFilters.colorsFilter.length == 1  && this.selectedFilters.shapesFilter.length >1){
+        this.textToDisplay=`Multiple ${this.selectedFilters.colorsFilter[0]} items`
+      }
+      else if (this.selectedFilters.shapesFilter.length == 1  && this.selectedFilters.colorsFilter.length >1){
+        this.textToDisplay=`Multiple ${this.selectedFilters.shapesFilter[0]} items`
+      }
+      else if (this.selectedFilters.shapesFilter.length == 1  && this.selectedFilters.colorsFilter.length ==1){
+        this.textToDisplay=`  ${this.selectedFilters.shapesFilter[0]} ${this.selectedFilters.colorsFilter[0]} items`
+      }
   },
+
+
 
 
     getObject() {
